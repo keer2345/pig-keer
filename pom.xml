@@ -26,6 +26,11 @@
     <packaging>pom</packaging>
     <url>https://www.pig4cloud.com</url>
 
+    <modules>
+        <module>pig-business</module>
+        <module>pig-common</module>
+    </modules>
+
     <properties>
         <spring-boot.version>3.1.0</spring-boot.version>
         <spring-cloud.version>2022.0.2</spring-cloud.version>
@@ -97,7 +102,7 @@
         <dependencies>
             <!--pig 公共版本定义-->
             <dependency>
-                <groupId>com.pig4cloud</groupId>
+                <groupId>com.keer</groupId>
                 <artifactId>pig-common-bom</artifactId>
                 <version>${project.version}</version>
                 <type>pom</type>

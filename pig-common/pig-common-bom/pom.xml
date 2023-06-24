@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.keer</groupId>
+    <artifactId>pig-common-bom</artifactId>
+    <version>3.1.0</version>
+    <packaging>pom</packaging>
+
+    <name>pig-common-bom</name>
+    <url>pig cloud parent</url>
+    <description>pig cloud parent</description>
+
+    <properties>
+        <pig.common.version>${project.version}</pig.common.version>
+        <spring-boot.version>3.1.0</spring-boot.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <log4j2.version>2.17.1</log4j2.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <git.commit.plugin>4.9.9</git.commit.plugin>
+        <spring.checkstyle.plugin>0.0.34</spring.checkstyle.plugin>
+        <fastjson.version>1.2.83</fastjson.version>
+        <springdoc.version>2.0.0</springdoc.version>
+        <swagger.core.version>2.2.7</swagger.core.version>
+        <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
+        <mysql.version>8.0.33</mysql.version>
+        <seata.version>1.6.1</seata.version>
+        <excel.version>3.0.0</excel.version>
+        <asm.version>7.1</asm.version>
+        <oss.version>3.0.0</oss.version>
+        <sms.version>3.0.0</sms.version>
+        <jaxb.version>2.3.5</jaxb.version>
+        <hutool.version>5.8.18</hutool.version>
+        <mica.version>2.7.4</mica.version>
+        <sentinel.version>1.8.4</sentinel.version>
+    </properties>
+
+    <!-- 定义全局jar版本,模块使用需要再次引入但不用写版本号-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.keer</groupId>
+                <artifactId>pig-common-core</artifactId>
+                <version>${pig.common.version}</version>
+            </dependency>
+            <!--hutool bom 工具类-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-bom</artifactId>
+                <version>${hutool.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.keer</groupId>
+                <artifactId>pig-business-api</artifactId>
+                <version>${pig.common.version}</version>
+            </dependency>
+            <!--web 模块-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${spring-boot.version}</version>
+                <exclusions>
+                    <!--排除tomcat依赖-->
+                    <exclusion>
+                        <artifactId>spring-boot-starter-tomcat</artifactId>
+                        <groupId>org.springframework.boot</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
