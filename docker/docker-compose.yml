@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  pig-business:
+    build:
+      context: ../pig-business/pig-business-biz
+    restart: always
+    ports:
+      - 4000:4000
+    container_name: pig-business-biz
+    image: pig-business-biz

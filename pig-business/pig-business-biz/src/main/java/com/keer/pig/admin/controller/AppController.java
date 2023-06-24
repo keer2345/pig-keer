@@ -16,6 +16,6 @@ public class AppController {
   @GetMapping("test")
   public String test() {
     log.info(">>> test controller");
-    return "test...";
+    return "test...2";
   }
 }

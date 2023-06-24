@@ -24,3 +24,10 @@
 |               | pig-common-core  | 5%  |
 | ping-business | pig-business-api | 10% |                   |
 |               | pig-business-biz | 10% |                   |
+
+## Run
+```shell
+cd docker
+chmod 751 deploy.sh
+sh deploy.sh [init|start|restart|stop|remove]
+```
