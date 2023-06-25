@@ -17,15 +17,17 @@
 
 ## 模块
 
-| 模块            | 子模块              | 完成度 | 备注                |
-|---------------|------------------|-----|-------------------|
-| Root          |                  | 90% | pom.xml - fabric8 |
-| ping-common   | pig-common-bom   | 10% |                   |
-|               | pig-common-core  | 5%  |
-| ping-business | pig-business-api | 10% |                   |
-|               | pig-business-biz | 10% |                   |
+| 模块           | 子模块              | 完成度 | 备注                                        |
+|--------------|------------------|-----|-------------------------------------------|
+| Root         |                  | 90% | pom.xml - fabric8                         |
+| pig-common   | pig-common-bom   | 10% |                                           |
+|              | pig-common-core  | 5%  |
+| pig-business | pig-business-api | 10% |                                           |
+|              | pig-business-biz | 10% |                                           |
+| pig-visual   | pig-monitor      | 80% | NacosServiceInstanceConverter.java & yaml |
 
 ## Run
+
 ```shell
 cd docker
 chmod 751 deploy.sh
