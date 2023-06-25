@@ -29,6 +29,7 @@
     <modules>
         <module>pig-business</module>
         <module>pig-common</module>
+        <module>pig-visual</module>
     </modules>
 
     <properties>
